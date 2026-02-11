@@ -5,91 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlackWolf Security</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #0d1117;
-    color: #ffffff;
-    line-height: 1.6;
+    background: #0f172a;
+    color: #f1f5f9;
 }
 
-/* MOBILE FIRST */
+/* HERO */
 header {
+    padding: 80px 20px;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #000000, #1f2937);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 header h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 header p {
-    font-size: 16px;
-    color: #ccc;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #94a3b8;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #ff3c00;
-    color: #fff;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #ff3c00, #ff6a00);
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 60, 0, 0.6);
+}
+
+/* SEÇÕES */
 section {
-    padding: 40px 20px;
+    padding: 70px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .section-title {
-    font-size: 22px;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .card {
-    background-color: #161b22;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: 0.3s;
 }
 
-.card h3 {
-    margin-bottom: 10px;
-    color: #ff3c00;
+.card:hover {
+    transform: translateY(-5px);
+    background: #263449;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 65px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #000;
+    padding: 30px;
+    background: #0b1220;
+    color: #64748b;
     font-size: 14px;
-}
-
-/* DESKTOP */
-@media(min-width:768px) {
-    .services {
-        display: flex;
-        gap: 20px;
-    }
-
-    .card {
-        flex: 1;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
 }
 </style>
 </head>
@@ -98,69 +120,38 @@ footer {
 
 <header>
     <h1>BlackWolf Security</h1>
-    <p>Proteja seu site antes que seja tarde.</p>
-    <a href="#contato" class="btn">Solicitar Análise Gratuita</a>
+    <p>Proteção digital inteligente para negócios modernos.</p>
+    <a href="https://wa.me/5511999999999" target="_blank" class="btn">
+        Solicitar Análise Gratuita
+    </a>
 </header>
 
 <section>
-    <h2 class="section-title">Por que seu site precisa de segurança?</h2>
-    <div class="card">
-        Pequenas empresas são alvos frequentes de ataques digitais.
-        Uma falha simples pode resultar em vazamento de dados e prejuízo financeiro.
-    </div>
-</section>
-
-<section>
     <h2 class="section-title">Nossos Serviços</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Análise de Vulnerabilidade</h3>
-            Identificação de falhas como SQL Injection, XSS e exposição de dados.
-        </div>
-
-        <div class="card">
-            <h3>Relatório Profissional</h3>
-            Documento técnico com nível de risco e recomendações de correção.
-        </div>
-
-        <div class="card">
-            <h3>Hardening WordPress</h3>
-            Ajustes de segurança para proteger seu site contra ataques comuns.
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2 class="section-title">Planos</h2>
 
     <div class="card">
-        <h3>Plano Essencial - R$ 500</h3>
-        Análise básica + relatório simplificado.
+        <h3>Análise de Vulnerabilidade</h3>
+        <p>Identificação de falhas críticas como SQL Injection, XSS e exposição de dados sensíveis.</p>
     </div>
 
     <div class="card">
-        <h3>Plano Profissional - R$ 1.000</h3>
-        Testes avançados + relatório detalhado.
+        <h3>Relatório Profissional</h3>
+        <p>Documento executivo detalhado com impacto, risco e recomendações técnicas.</p>
     </div>
 
     <div class="card">
-        <h3>Plano Mensal - R$ 300/mês</h3>
-        Monitoramento contínuo + suporte prioritário.
-    </div>
-</section>
-
-<section id="contato">
-    <h2 class="section-title">Contato</h2>
-
-    <div class="card">
-        <p>Email: contato@blackwolfsecurity.com</p>
-        <p>WhatsApp: (00) 00000-0000</p>
+        <h3>Monitoramento Contínuo</h3>
+        <p>Acompanhamento mensal para manter seu ambiente protegido contra novas ameaças.</p>
     </div>
 </section>
 
 <footer>
-    © 2026 BlackWolf Security - Todos os direitos reservados.
+    © 2026 BlackWolf Security. Todos os direitos reservados.
 </footer>
+
+<a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
+💬
+</a>
 
 </body>
 </html>
